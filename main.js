@@ -172,8 +172,8 @@ const withDefaultParam = (typeOfUser = 'user') => {
     }
 }
 
-withDefaultParam();
-withDefaultParam('admin');
+// withDefaultParam();
+// withDefaultParam('admin');
 
 /**
  * Destructuring
@@ -221,9 +221,9 @@ withDefaultParam('admin');
  * Template String
  */
 
-const fullName = 'Huy Hoang';
-const str = 'My name is ' + fullName;
-const templateStr = `My name is ${fullName}`;
+// const fullName = 'Huy Hoang';
+// const str = 'My name is ' + fullName;
+// const templateStr = `My name is ${fullName}`;
 
 
 /**
@@ -242,3 +242,120 @@ const templateStr = `My name is ${fullName}`;
 // }
 
 // console.log(person);
+
+/**
+ * Spread operator (...)
+ * - Copy Array
+ * - Copy Object
+ * - Tham trị (các kiểu dữ liệu nguyên thuỷ), tham chiếu (array, object)?
+ * - Merge array
+ * - Thêm phần tử vào mảng
+ * - Sử dụng array như danh sách các tham số của func
+ */
+
+// const person = ['Tay', 'Hoang', 'Huy'];
+// console.log(person[0], person[1], person[2]);
+// console.log(...person);
+// console.log('Tay', 'Hoang', 'Huy');
+
+// Copy array
+// Tham chiếu (Array, Object)
+// let nums1 = [1, 2, 3];
+// let nums2 = nums1;
+
+// nums2.push(4);
+
+// console.log('nums2 ', nums2);
+// console.log('nums1 ', nums1);
+
+// let nums1 = [1, 2, 3];
+// let nums2 = [0, ...nums1, 4, 5, 6];
+
+// // nums2.push(4);
+// console.log(nums1);
+// console.log(nums2);
+
+// Merge Array
+// var nums1 = [1, 2, 3];
+// var nums2 = [4, 5, 6];
+
+// var nums3 = nums1.concat(nums2);
+// console.log(nums3);
+
+// var nums3 = [...nums1, ...nums2];
+// console.log(nums3);
+
+// Copy object
+// var obj1 = {
+//     a: 1,
+//     b: 2,
+// }
+
+// var obj2 = {...obj1, c: 3, a: 2};
+// // obj2.c = 3;
+// console.log(obj1);
+// console.log(obj2);
+
+// const users = ['Tay', 'Hoang', 'Huy'];
+
+// const showUsers = (user1, user2, user3) => console.log(user1, user2, user3);
+
+// // showUsers(users[0], users[1], users[2]);
+// showUsers(...users);
+
+/**
+ * Rest parameter
+ */
+// const calcSum = (num1, num2, num3) => console.log(num1 + num2 + num3);
+
+// calcSum(1, 2, 3);
+
+// const calcSum = (...nums) => {
+//     let sum = 0;
+//     nums.forEach(num => {
+//        sum += num;
+//     });
+//     console.log(sum);
+// }
+
+// calcSum(1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+/**
+ * Module
+ * - import
+ * - export
+ */
+
+// import { setLocalStorage, getLocalStorage } from './utils.js';
+
+// setLocalStorage();
+// getLocalStorage();
+
+/**
+ * Class: bản chất vẫn là 1 func
+ */
+
+// expression
+// const Person = class {
+
+// }
+
+// declaration
+// class Person {
+//     constructor(_firstName, _lastName, _birthYear) {
+//         this.firstName = _firstName;
+//         this.lastName = _lastName;
+//         this.birthYear = _birthYear;
+//     }
+
+//     calcAge() {
+//         return 2021 - this.birthYear;
+//     }
+// }
+
+// const tay = new Person('Chu', 'Tay', 2000);
+// console.log(tay);
+
+// console.log(tay.__proto__ === Person.prototype);
+
+
